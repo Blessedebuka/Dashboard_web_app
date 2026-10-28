@@ -13,7 +13,7 @@ Welcome to my Portfolio! This repository showcases end-to-end projects spanning 
     * Validated $k=3$ cluster boundaries using Elbow method and Silhouette Analysis ($0.5483$)
     * Identified 3 distinct buyer personas (Standard Service, Bulk HoReCa, Retail Supermarkets).
 
-### 2. [Executive HR Analytics & Attrition Dashboard](./hr-analytics-dashboard/
+### 2. [Executive HR Analytics & Attrition Dashboard](./hr-analytics-dashboard/)
   **Domain:** Business Intelligence * HR Analytics
   **Tech Stack:** Power Query, Power BI, DAX, Star Schema Data Modeling.
   **Key Highlights:**
