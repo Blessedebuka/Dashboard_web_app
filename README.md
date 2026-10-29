@@ -5,7 +5,7 @@ Welcome to my Portfolio! This repository showcases end-to-end projects spanning 
 
 ###  Portfolio Projects
 
-### 1. [Customer Segmentation Using K-Means Clustering](./Wholesome_Customer_Analysis.md)
+### 1. [Customer Segmentation Using K-Means Clustering](./customer-segmentation/)
   **Domain:** Unsupervised Machine Learning & Retail Analytics
   **Tech Stack:** Python, Pandas, Scicit-Learn, Seaborn
   **Key Highlights:**
