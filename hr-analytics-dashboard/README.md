@@ -1,42 +1,27 @@
-Title: Customer Segmentation & Behavioral Analysis Using K-Means Clustering
+Title: Executive HR Analytics and Attrition Dashboard
 
-Project Overview: This project applies unsupervised machine learning (K-Means Clustering) to wholesome customer data
-to ideentify distinct purchasing behaviour segment client types, and uncover actionable business insights.
+Project Overview: An end-to-end Human Resources reporting solution built in Power BI to monitor active headcount, evaluate compensation trends, track employee satisfaction, and perform deep-dive risk analysis on voluntary and involuntary employee turnover.
 
-Tech Stach:
-Language: Python
-Libraries: Pandas, Numpy, Scicit-Learn(K-Means, StandardScaler, silhouette_score), Matplotlib,Seaborn.
+Data Architecture & Modeling
 
-Methodology & Data Preprocessing:
-1. Handling the "Categorical Trap":
-Isolated continuous monetary spending feature(Fresh, Milk, Grocery, Frozen, Detergent_Paper, Delicassen) by
-dropping non-numeric metadata (Channel and Region) to prevent distorting Euclidean distance calculations.
-2. Feature Scaling: Applied StandardScaler() to center features around a mean of zero and standard deviation
-of one, preventing high-magnitude columns from dominating the clustering algorithm.
+Built a robust Star Schema data model to optimize query performance and reporting relationships.
 
-Model Optimization (k Selection):
-1. Elbow Method: Evaluated the sum of Squared Errors (SSE) across various cluster counts.
-2. Silhouette Analysis: Validated cluster separation and cohesion, determining that k = 3 yielded the optimal
- balance of statistical robustness and business granularity (achieving a high silhouette score of 0.5483).
+Dimension Tables: Dim_Departments, Dim_Employees, Dim_Manager, Dim_Position
 
-Customer Personas & Business Insights
-1. Cluster 0 (Standard Food Service): Represent  baseline, steady everyday consumers maintaining moderate
-purchasing habits across categories.
-2. Cluster 1 (HoReCa Bulk Purchasers): High-vlume purchasers dominated heavily by raw perishables
-(Fresh and Frozen), typical of large restaurants, hotels, and caterers.
-3. Cluster 2 (Retail Supermarkets/Glocers): Dominated by packaged goods (Milk, Glocery, and Detergent_Paper),
-representing local retail shops and mini-markets.
+Fact & Measure Tables: Fact_table connected cleanly to a dedicated measure_table handling all custom DAX calculations.
 
-![Average Spending Profile Per Customer Cluster](https://github.com/user-attachments/assets/fdf1a83b-a64d-487e-a1fc-5166c3e14db8)
+Dashboard Pages & Key Metrics
 
+1. Active Headcount Page
+Core KPIs: Tracks total active employees (207), average salary ($69.02K), average employee age (46.98), and overall satisfaction score (3.89).
 
+Dimensional Slicers: Dynamic filtering by employment status and salary tier.
 
+Departmental Breakdown: Visualizes headcount distribution and average salary tiers across departments like Production, IT/IS, Sales, and Administration.
 
+2. Attrition Analysis Page
+Turnover Insights: Analyzes total terminated employees, overall attrition rate (33.44%), and voluntary attrition rate (28.30%).
 
+Risk Breakdown: Includes a comprehensive Manager Risk Analysis table to identify attrition trends by reporting lines.
 
-
-
-
-
-
-
+Satisfaction & Trends: Correlates attrition rates with satisfaction tiers and maps monthly termination spikes over time.
